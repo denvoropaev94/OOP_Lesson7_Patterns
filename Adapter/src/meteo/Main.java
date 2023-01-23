@@ -11,6 +11,9 @@ public class Main {
         MeteoSensor ms200_1 = new MS200(1);
         meteoDb.save(ms200_1);
 
+        MeteoSensor st500 = new SpikeAdapter(new ST500Info().getData());
+        meteoDb.save(st500);
+
         // Здесь надо вызвать метод getData у класса ST500Info. Полученные данные отправить в метод save объекта meteoDb
     }
 }
